@@ -50,18 +50,7 @@ def load_bars():
         FROM Countries
         WHERE EnglishName = ?
     '''
-    '''
-        "Id" INTEGER PRIMARY KEY AUTOINCREMENT, 
-        "Company" TEXT NOT NULL,
-        "SpecificBeanBarName" TEXT NOT NULL, 
-        "REF" TEXT NOT NULL,
-        "ReviewDate" TEXT NOT NULL,
-        "CocoaPercent" REAL NOT NULL,
-        "CompanyLocationId" INTEGER NOT NULL, 
-        "Rating" REAL NOT NULL, 
-        "BeanType" TEXT NOT NULL, 
-        "BroadBeanOrigin" INTEGER
-    '''
+
     conn = sqlite3.connect(DB_NAME)
     cur = conn.cursor()
     for row in bars_csv_reader:
